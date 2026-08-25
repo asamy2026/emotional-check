@@ -1,205 +1,189 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 2-Minute Emotional Exhaustion Check</title>
+<style>
+  :root {
+    --bg: #f7f4ef; --card: #ffffff; --ink: #2b2b2b; --muted: #6b6b6b;
+    --accent: #3f7d5a; --accent-soft: #e7f0ea; --line: #e5e0d8;
+    --warn: #b07a2e; --high: #a8443a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg); color: var(--ink); line-height: 1.55;
+    padding: 24px 16px 60px;
+  }
+  .wrap { max-width: 620px; margin: 0 auto; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 24px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  h1 { font-size: 22px; line-height: 1.3; margin-bottom: 8px; }
+  .sub { color: var(--muted); font-size: 15px; }
+  .intro { font-size: 15px; margin-top: 12px; }
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 4px;
+    font-size: 13px; color: var(--muted);
+  }
+  .legend span b { color: var(--ink); }
+  .q { margin: 18px 0; }
+  .q-label { font-size: 15px; margin-bottom: 8px; }
+  .opts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .opt { position: relative; }
+  .opt input { position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
+  .opt label {
+    display: block; text-align: center; padding: 10px 4px;
+    border: 1.5px solid var(--line); border-radius: 10px;
+    font-size: 13px; font-weight: 600; cursor: pointer; transition: all .15s ease;
+  }
+  .opt input:checked + label { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  .opt input:focus-visible + label { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .btn {
+    width: 100%; padding: 14px; border: none; border-radius: 12px;
+    background: var(--accent); color: #fff; font-size: 16px; font-weight: 700;
+    cursor: pointer; margin-top: 8px;
+  }
+  .btn:disabled { background: #c9c9c9; cursor: not-allowed; }
+  .result { display: none; }
+  .result.show { display: block; }
+  .score-big { font-size: 44px; font-weight: 800; color: var(--accent); }
+  .band { font-size: 17px; font-weight: 700; margin: 4px 0 8px; }
+  .next { background: var(--accent-soft); border-radius: 12px; padding: 14px; margin-top: 12px; }
+  .next b { color: var(--accent); }
+  .note { font-size: 12.5px; color: var(--muted); margin-top: 12px; }
+  .reset { margin-top: 16px; background: none; border: 1.5px solid var(--line); color: var(--muted); }
+  .cta { text-align: center; margin-top: 20px; }
+  .cta a {
+    display: inline-block; padding: 13px 22px; border-radius: 12px;
+    background: var(--accent); color: #fff; text-decoration: none; font-weight: 700;
+  }
+  .cta .alt { display: block; margin-top: 10px; color: var(--muted); font-size: 13px; }
+  .band-0 { color: var(--accent); }
+  .band-1 { color: var(--warn); }
+  .band-2 { color: var(--warn); }
+  .band-3 { color: var(--high); }
+  .foot { text-align: center; color: var(--muted); font-size: 12px; margin-top: 20px; }
+</style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1">&lt;title&gt;The 2-Minute Emotional Exhaustion Check&lt;/title&gt;</p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--bg: #f7f4ef; --card: #ffffff; --ink: #2b2b2b; --muted: #6b6b6b;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--accent: #3f7d5a; --accent-soft: #e7f0ea; --line: #e5e0d8;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--warn: #b07a2e; --high: #a8443a;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>* { box-sizing: border-box; margin: 0; padding: 0; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: var(--bg); color: var(--ink); line-height: 1.55;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 24px 16px 60px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.wrap { max-width: 620px; margin: 0 auto; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.card {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: var(--card); border: 1px solid var(--line); border-radius: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 24px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>h1 { font-size: 22px; line-height: 1.3; margin-bottom: 8px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.sub { color: var(--muted); font-size: 15px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.intro { font-size: 15px; margin-top: 12px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.legend {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 4px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 13px; color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.legend span b { color: var(--ink); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.q { margin: 18px 0; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.q-label { font-size: 15px; margin-bottom: 8px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.opts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.opt { position: relative; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.opt input { position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.opt label {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: block; text-align: center; padding: 10px 4px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: 1.5px solid var(--line); border-radius: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size: 13px; font-weight: 600; cursor: pointer; transition: all .15s ease;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.opt input:checked + label { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.opt input:focus-visible + label { outline: 2px solid var(--accent); outline-offset: 2px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 100%; padding: 14px; border: none; border-radius: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: var(--accent); color: #fff; font-size: 16px; font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer; margin-top: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn:disabled { background: #c9c9c9; cursor: not-allowed; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.result { display: none; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.result.show { display: block; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.score-big { font-size: 44px; font-weight: 800; color: var(--accent); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.band { font-size: 17px; font-weight: 700; margin: 4px 0 8px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.next { background: var(--accent-soft); border-radius: 12px; padding: 14px; margin-top: 12px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.next b { color: var(--accent); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.note { font-size: 12.5px; color: var(--muted); margin-top: 12px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.reset { margin-top: 16px; background: none; border: 1.5px solid var(--line); color: var(--muted); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.cta { text-align: center; margin-top: 20px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.cta a {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display: inline-block; padding: 13px 22px; border-radius: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background: var(--accent); color: #fff; text-decoration: none; font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.cta .alt { display: block; margin-top: 10px; color: var(--muted); font-size: 13px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.band-0 { color: var(--accent); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.band-1 { color: var(--warn); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.band-2 { color: var(--warn); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.band-3 { color: var(--high); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.foot { text-align: center; color: var(--muted); font-size: 12px; margin-top: 20px; }</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1">&lt;div class="wrap"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card" id="quizCard"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;The 2-Minute Emotional Exhaustion Check&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="sub"&gt;You are not broken. You may simply be carrying more than you realise.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="intro"&gt;Over the past two weeks, how often have you experienced the following?&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="legend"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;&lt;b&gt;Never&lt;/b&gt; = 0&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;&lt;b&gt;Sometimes&lt;/b&gt; = 1&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;&lt;b&gt;Often&lt;/b&gt; = 2&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;&lt;b&gt;Almost always&lt;/b&gt; = 3&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="questions"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="btn" id="scoreBtn" disabled&gt;See my score&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card result" id="resultCard"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="sub"&gt;Your score&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="score-big" id="scoreNum"&gt;0&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="band" id="bandTitle"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="bandText"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="next" id="nextStep"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="note"&gt;These score bands are practical engagement categories created for this checklist; they are not validated clinical thresholds.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="btn reset" id="resetBtn"&gt;Take the check again&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cta"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" id="ctaLink"&gt;Get my free three-day emotional reset guide&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="alt"&gt;Your score does not define you. You may simply be tired from carrying too much for too long. 💚&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="foot"&gt;Created by Dr. Arokia · The Gift of Hope&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>var QUESTIONS = [</p>
-<p class="p1"><span class="Apple-converted-space">    </span>"You wake up feeling tired, even after having an opportunity to sleep.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>"Small tasks, decisions or responsibilities feel harder than they used to.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>"You feel irritable, tearful, emotionally numb or less patient than usual.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>"Your mind keeps worrying, replaying conversations or anticipating problems when you are trying to rest.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>"You feel responsible for supporting others but have little time or energy for yourself.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>"You are carrying a loss, change or disappointment that you have not fully acknowledged or had space to process."</p>
-<p class="p1"><span class="Apple-converted-space">  </span>];</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>var BANDS = [</p>
-<p class="p1"><span class="Apple-converted-space">    </span>{ title: "Your emotional reserves appear relatively steady.",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text: "You may still experience demanding moments, but your responses do not suggest a substantial current pattern of emotional exhaustion.",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>next: "Continue protecting your sleep, boundaries and opportunities to recharge.", cls: "band-0" },</p>
-<p class="p1"><span class="Apple-converted-space">    </span>{ title: "Your emotional load may be increasing.",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text: "You might be managing, but some of your emotional reserves appear to be under pressure.",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>next: "Identify one responsibility you can postpone, delegate or simplify this week.", cls: "band-1" },</p>
-<p class="p1"><span class="Apple-converted-space">    </span>{ title: "You may be carrying significant emotional exhaustion.",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text: "Your responses suggest that ongoing pressure, worry, caregiving or unrecognised loss may be affecting your wellbeing.",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>next: "Speak to someone you trust, reduce one avoidable demand and consider what kind of support you need.", cls: "band-2" },</p>
-<p class="p1"><span class="Apple-converted-space">    </span>{ title: "Your emotional reserves may be heavily depleted.",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text: "Your responses suggest that you may need meaningful support and recovery rather than simply trying to push through.",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>next: "Consider arranging an appointment with your GP or a qualified mental health professional, particularly if these difficulties are persistent or affecting daily life.", cls: "band-3" }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>];</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Replace this with your real link (quiz / booking page / email)</p>
-<p class="p1"><span class="Apple-converted-space">  </span>var CTA_LINK = "https://griefmasterc-bxpdss53.manus.space/";</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>var qWrap = document.getElementById("questions");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>var answers = new Array(QUESTIONS.length).fill(null);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>QUESTIONS.forEach(function (q, i) {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var qDiv = document.createElement("div");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>qDiv.className = "q";</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var label = document.createElement("div");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>label.className = "q-label";</p>
-<p class="p1"><span class="Apple-converted-space">    </span>label.textContent = (i + 1) + ". " + q;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>qDiv.appendChild(label);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var opts = document.createElement("div");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>opts.className = "opts";</p>
-<p class="p1"><span class="Apple-converted-space">    </span>[0, 1, 2, 3].forEach(function (v) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>var o = document.createElement("div");</p>
-<p class="p1"><span class="Apple-converted-space">      </span>o.className = "opt";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>var input = document.createElement("input");</p>
-<p class="p1"><span class="Apple-converted-space">      </span>input.type = "radio"; input.name = "q" + i; input.value = v; input.id = "q" + i + "_" + v;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>input.addEventListener("change", function () { answers[i] = v; checkReady(); });</p>
-<p class="p1"><span class="Apple-converted-space">      </span>var lab = document.createElement("label");</p>
-<p class="p1"><span class="Apple-converted-space">      </span>lab.htmlFor = input.id; lab.textContent = v;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>o.appendChild(input); o.appendChild(lab); opts.appendChild(o);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>qDiv.appendChild(opts);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>qWrap.appendChild(qDiv);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>function checkReady() {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var all = answers.every(function (a) { return a !== null; });</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("scoreBtn").disabled = !all;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("scoreBtn").addEventListener("click", function () {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var total = answers.reduce(function (s, a) { return s + a; }, 0);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var band = total &lt;= 4 ? 0 : total &lt;= 9 ? 1 : total &lt;= 14 ? 2 : 3;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var b = BANDS[band];</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("scoreNum").textContent = total;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var bt = document.getElementById("bandTitle");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>bt.textContent = b.title; bt.className = "band " + b.cls;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("bandText").textContent = b.text;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("nextStep").innerHTML = "&lt;b&gt;Your next step:&lt;/b&gt; " + b.next;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("ctaLink").href = CTA_LINK;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("quizCard").style.display = "none";</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("resultCard").classList.add("show");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>window.scrollTo({ top: 0, behavior: "smooth" });</p>
-<p class="p1"><span class="Apple-converted-space">  </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("resetBtn").addEventListener("click", function () {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>answers.fill(null);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll("input[type=radio]").forEach(function (r) { r.checked = false; });</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("scoreBtn").disabled = true;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("resultCard").classList.remove("show");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("quizCard").style.display = "block";</p>
-<p class="p1"><span class="Apple-converted-space">    </span>window.scrollTo({ top: 0, behavior: "smooth" });</p>
-<p class="p1"><span class="Apple-converted-space">  </span>});</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<div class="wrap">
+
+  <div class="card" id="quizCard">
+    <h1>The 2-Minute Emotional Exhaustion Check</h1>
+    <p class="sub">You are not broken. You may simply be carrying more than you realise.</p>
+    <p class="intro">Over the past two weeks, how often have you experienced the following?</p>
+    <div class="legend">
+      <span><b>Never</b> = 0</span>
+      <span><b>Sometimes</b> = 1</span>
+      <span><b>Often</b> = 2</span>
+      <span><b>Almost always</b> = 3</span>
+    </div>
+    <div id="questions"></div>
+    <button class="btn" id="scoreBtn" disabled>See my score</button>
+  </div>
+
+  <div class="card result" id="resultCard">
+    <p class="sub">Your score</p>
+    <div class="score-big" id="scoreNum">0</div>
+    <div class="band" id="bandTitle"></div>
+    <div id="bandText"></div>
+    <div class="next" id="nextStep"></div>
+    <p class="note">These score bands are practical engagement categories created for this checklist; they are not validated clinical thresholds.</p>
+    <button class="btn reset" id="resetBtn">Take the check again</button>
+    <div class="cta">
+      <a href="#" id="ctaLink">Get my free three-day emotional reset guide</a>
+      <span class="alt">Your score does not define you. You may simply be tired from carrying too much for too long. 💚</span>
+    </div>
+  </div>
+
+  <p class="foot">Created by Dr. Arokia · The Gift of Hope</p>
+</div>
+
+<script>
+  var QUESTIONS = [
+    "You wake up feeling tired, even after having an opportunity to sleep.",
+    "Small tasks, decisions or responsibilities feel harder than they used to.",
+    "You feel irritable, tearful, emotionally numb or less patient than usual.",
+    "Your mind keeps worrying, replaying conversations or anticipating problems when you are trying to rest.",
+    "You feel responsible for supporting others but have little time or energy for yourself.",
+    "You are carrying a loss, change or disappointment that you have not fully acknowledged or had space to process."
+  ];
+
+  var BANDS = [
+    { title: "Your emotional reserves appear relatively steady.",
+      text: "You may still experience demanding moments, but your responses do not suggest a substantial current pattern of emotional exhaustion.",
+      next: "Continue protecting your sleep, boundaries and opportunities to recharge.", cls: "band-0" },
+    { title: "Your emotional load may be increasing.",
+      text: "You might be managing, but some of your emotional reserves appear to be under pressure.",
+      next: "Identify one responsibility you can postpone, delegate or simplify this week.", cls: "band-1" },
+    { title: "You may be carrying significant emotional exhaustion.",
+      text: "Your responses suggest that ongoing pressure, worry, caregiving or unrecognised loss may be affecting your wellbeing.",
+      next: "Speak to someone you trust, reduce one avoidable demand and consider what kind of support you need.", cls: "band-2" },
+    { title: "Your emotional reserves may be heavily depleted.",
+      text: "Your responses suggest that you may need meaningful support and recovery rather than simply trying to push through.",
+      next: "Consider arranging an appointment with your GP or a qualified mental health professional, particularly if these difficulties are persistent or affecting daily life.", cls: "band-3" }
+  ];
+
+  // Replace this with your real link (quiz / booking page / email)
+  var CTA_LINK = "https://griefmasterc-bxpdss53.manus.space/";
+
+  var qWrap = document.getElementById("questions");
+  var answers = new Array(QUESTIONS.length).fill(null);
+
+  QUESTIONS.forEach(function (q, i) {
+    var qDiv = document.createElement("div");
+    qDiv.className = "q";
+    var label = document.createElement("div");
+    label.className = "q-label";
+    label.textContent = (i + 1) + ". " + q;
+    qDiv.appendChild(label);
+    var opts = document.createElement("div");
+    opts.className = "opts";
+    [0, 1, 2, 3].forEach(function (v) {
+      var o = document.createElement("div");
+      o.className = "opt";
+      var input = document.createElement("input");
+      input.type = "radio"; input.name = "q" + i; input.value = v; input.id = "q" + i + "_" + v;
+      input.addEventListener("change", function () { answers[i] = v; checkReady(); });
+      var lab = document.createElement("label");
+      lab.htmlFor = input.id; lab.textContent = v;
+      o.appendChild(input); o.appendChild(lab); opts.appendChild(o);
+    });
+    qDiv.appendChild(opts);
+    qWrap.appendChild(qDiv);
+  });
+
+  function checkReady() {
+    var all = answers.every(function (a) { return a !== null; });
+    document.getElementById("scoreBtn").disabled = !all;
+  }
+
+  document.getElementById("scoreBtn").addEventListener("click", function () {
+    var total = answers.reduce(function (s, a) { return s + a; }, 0);
+    var band = total <= 4 ? 0 : total <= 9 ? 1 : total <= 14 ? 2 : 3;
+    var b = BANDS[band];
+    document.getElementById("scoreNum").textContent = total;
+    var bt = document.getElementById("bandTitle");
+    bt.textContent = b.title; bt.className = "band " + b.cls;
+    document.getElementById("bandText").textContent = b.text;
+    document.getElementById("nextStep").innerHTML = "<b>Your next step:</b> " + b.next;
+    document.getElementById("ctaLink").href = CTA_LINK;
+    document.getElementById("quizCard").style.display = "none";
+    document.getElementById("resultCard").classList.add("show");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    answers.fill(null);
+    document.querySelectorAll("input[type=radio]").forEach(function (r) { r.checked = false; });
+    document.getElementById("scoreBtn").disabled = true;
+    document.getElementById("resultCard").classList.remove("show");
+    document.getElementById("quizCard").style.display = "block";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
 </body>
 </html>
